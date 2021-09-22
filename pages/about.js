@@ -10,20 +10,16 @@ const About = () => {
           <link rel="icon" href="/favicon.ico" />
         </Head>
         <main>
-          <h1 className="title">Sobre esta página</h1>
-          <p className="description">
-            ESCRIBIR INFORMACION SOBRE EL TRABAJO!!!!
-          </p>
-        </main>
 
+          <h1 className="title">MAS INFORMACION</h1>
+          
+        </main>
         <footer>
           <a href="https://github.com/FelipePrieto22/Grupo-2-Sophia-2" target="_blank">
             Repositorio y tutorial
           </a>
         </footer>
       </Layout>
-
-     
     </div>
   );
 };
