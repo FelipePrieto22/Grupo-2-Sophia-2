@@ -1,1 +1,1 @@
-
+#Deje solo lo que nos podria servir para comenzar, deje una pagina principal para tener todo lo relacionado al trabajo y el acerca de donde podemos poner como la descripcion del trabajo, integrantes y todo ese tipo de cosas, estas 2 paginas las enlace al layout, el archivo html pruebas.html no lo tomen en cuenta, era solo para hacerme una guia de como usar html.
