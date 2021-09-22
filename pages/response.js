@@ -16,7 +16,7 @@ const Respuesta = () => {
         <title>Respuesta</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
+      
       <main>
         <h1 className="title">{texts[router.query.opt]}</h1>
 

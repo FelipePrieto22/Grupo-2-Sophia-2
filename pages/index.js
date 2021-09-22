@@ -1,29 +1,52 @@
 import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
+import Layout from "../components/layout";
+import * as React from 'react';
+import ReactDOM from 'react-dom';
+import Button from '@material-ui/core/Button';
+import { Checkbox, TextField } from "@material-ui/core";
+
 const Index = () => {
   return (
     <div className="container">
       <Head>
-        <title>INFO104 Nextjs App</title>
+        <title>SOPHIA II</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main>
-        <Image
-          src="/images/eye.png"
-          height={294} // Desired size with correct aspect ratio
-          width={470} // Desired size with correct aspect ratio
-          alt="ojo"
-        />
+      <Layout pageId="page1">
+        <div className= "pruebas">Hola</div>
+        <main>
+          {/* <h2 className="title">
+            <Image
+              src="/images/eye.png"
+              height={50} // Desired size with correct aspect ratio
+              width={70} // Desired size with correct aspect ratio
+              alt="ojo"/>T.C.S SOPHIA II
+          </h2> */}
+          
+          <div>
+            {/* <Button variant="contained" color="primary"> {/* Botones  Filtros! </Button> */}
+            {/* <TextField label="Buscar"></TextField> {/* cuadros para escribir texto */} 
+          </div> 
+          <p className="botonFiltro">
+            Clickea el boton para desplegar los filtros!
+            {/* <TextField label="Buscar" size="small" ></TextField> {/* cuadros para escribir texto */}  
+          </p> 
 
-        <h1 className="title">¿Cómo ha sido tu semana?</h1>
 
-        <p className="description">
-          Este código está en <code>pages/index.js</code>
-        </p>
+          {/* <input type="checkbox" name="filter[in][]" value="chl" id="in_chl" class="checkbox"</input> */}
 
-        <div className="grid">
+          {/* <input type="button" name="Filtros"></input> */}
+
+          <Button variant="contained" color="primary" > {/* Botones */} Filtros! </Button>
+          
+          <Button onClick={() => { alert(':D') }}>Filtro por pais</Button>
+          <Checkbox >
+          </Checkbox>
+
+          {/* <div className="grid">
           <Link
             href={{
               pathname: "/response",
@@ -32,34 +55,50 @@ const Index = () => {
           >
             <a className="card">Excelente!</a>
           </Link>
-          <Link
-            href={{
-              pathname: "/response",
-              query: { opt: 1 },
-            }}
-          >
-            <a className="card">Más o menos no mas!</a>
-          </Link>
-          <Link
-            href={{
-              pathname: "/response",
-              query: { opt: 2 },
-            }}
-          >
-            <a className="card">Horrible! :(</a>
-          </Link>
-        </div>
-      </main>
+          </div> */}
+          
+          <header>
+              <b>Filtro por pais</b>
+          </header>
+          <nav className="lista">
+            <li>
+              <input type="checkbox">
+              </input>
+              <label class="checkbox " for="in_chl">Todos</label>
+            </li>
+            <li>
+              <input type="checkbox">
+              </input>
+              <label class="checkbox " for="in_chl">Chile</label>
+            </li>
+            <li>
+              <input type="checkbox">
+              </input>
+              <label class="checkbox " for="in_chl">Argentina</label>
+            </li>
+            <li>
+              <input type="checkbox">
+              </input>
+              <label class="checkbox " for="in_chl">Brazil</label>
+            </li>
+            <li>
+              <input type="checkbox">
+              </input>
+              <label class="checkbox " for="in_chl">Mexico</label>
+            </li>
+            <li>
+              <input type="checkbox">
+              </input>
+              <label class="checkbox " for="in_chl">Colombia</label>
+            </li>
+          </nav>
+          
+        </main>
+        <footer>
+          <a href="https://github.com/FelipePrieto22/Grupo-2-Sophia-2" target="_blank"> Repositorio y tutorial </a>
+        </footer>
+      </Layout>
 
-      <footer>
-        <a href="https://github.com/PabloSzx/INFO104-2021-1" target="_blank">
-          Repositorio y tutorial
-        </a>
-        &nbsp;-&nbsp;
-        <Link href="/about">
-          <a>Sobre esta página</a>
-        </Link>
-      </footer>
     </div>
   );
 };

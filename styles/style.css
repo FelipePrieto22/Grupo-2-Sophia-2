@@ -20,9 +20,21 @@ body {
   justify-content: center;
   align-items: center;
 }
+.pruebas{
+  justify-content: left;
+  align-items: left;
+  background-color: #0070f3;
+  align-items: left;
+}
+.botonFiltro{
+  justify-content:left;
+  background-color: rgb(187, 255, 0);
+  
+  text-align: left;
+}
 
 main {
-  padding: 5rem 0;
+  padding: 1.5rem;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -56,13 +68,12 @@ a {
 }
 
 .menu {
-  display: flex;
+  display: flex; 
   justify-content: center;
   align-items: center;
   font-size: 1.3em;
-  border-bottom: 1px solid #999999;
+  border-bottom: 1px solid #e0e0e0;
   width: 100%;
-  background-color: #eaeaea;
 }
 
 .menu a {
@@ -88,19 +99,6 @@ a {
   font-size: 0.8em;
   cursor: pointer;
 }
-.todo-list {
-}
-.todo-item {
-  display: flex;
-  padding: 10px;
-  border-bottom: 1px solid #e0e0e0;
-}
-.todo-item-title {
-  flex: 10;
-}
-.todo-item-done {
-  flex: 1;
-}
 
 .title a {
   color: #0070f3;
@@ -116,7 +114,7 @@ a {
 .title {
   margin: 0;
   line-height: 1.15;
-  font-size: 4rem;
+  font-size: 3rem;
 }
 
 .title,
