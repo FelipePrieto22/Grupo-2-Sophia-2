@@ -2,23 +2,25 @@ import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
 import Layout from "../components/layout";
-import * as React from 'react';
-import ReactDOM from 'react-dom';
-import Button from '@material-ui/core/Button';
-import { alertClasses, Checkbox, TextField } from "@material-ui/core";
-import { getSystemErrorMap } from "util";
-import { Script } from "vm";
+
 
 const Index = () => {
   return (
     <div className="container">
       <Layout pageId="page1">
         <Head>
-          <title>SOPHIA II</title>
+          <title>Sophia 2</title>
           <link rel="icon" href="/favicon.ico" />
         </Head>
+
         <main>
-        
+          <Image
+          src="/images/eye.png"//direccion de la imagen seleccionada
+          height={500} // Desired size with correct aspect ratio
+          width={300} // Desired size with correct aspect ratio
+          padding="50 px" //para que no salga pegado a la pagina
+          alt="ojo"//nombre que se le da a la imagen dentro de la página
+        />
           <h1 className="title">PLANTILLA</h1>
 
         </main>
