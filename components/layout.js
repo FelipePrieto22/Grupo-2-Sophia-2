@@ -21,6 +21,9 @@ const Layout = ({ children, pageId }) => {
         <Link href="/about">
           <a className={pageId === "page2" ? "currentPage" : ""}> Acerca de </a>
         </Link> 
+        <Link href="/test_graph">
+          <a className={pageId === "page3" ? "currentPage" : ""}> Test graficos </a>
+        </Link> 
       </header>
       <main>{children}</main>
     </div>
