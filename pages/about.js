@@ -10,9 +10,45 @@ const About = () => {
           <link rel="icon" href="/favicon.ico" />
         </Head>
         <main>
-
-          <h1 className="title">MAS INFORMACION</h1>
-          
+          <h1 className="titulos">Descripcion:</h1>
+          <article className="contenido">
+            El proyecto sophia 2 que consta de métodos basados en la lingüística computacional y 
+            el machine learning para el análisis del pluralismo en los medios de prensa, para este 
+            proyecto se trabajará con una base de datos sobre los medios de prensa, donde se encuentran 
+            noticias, datos de distintos países y años, nombres, entre otros recursos. Esta base de datos 
+            contiene datos desde el año 2000 hasta el 2021.
+          </article>
+          <h1 className="titulos">Historias de usuario</h1>
+          <article className="contenido">
+            Organización o activista interesada por la equidad de género.
+            Ver una lista de las mujeres más mencionadas o emergentes, su profesión y edad de cada país .
+            Para identificar quienes son las mujeres influyentes en cada país con las cuales se podría trabajar.
+          </article>
+          <div>
+            <aside className="contenidoExtra">
+              Organización o activista interesada por la equidad de género.Ver una lista de las mujeres más 
+              mencionadas o emergentes, su profesión y edad de cada país .Para identificar quienes son las 
+              mujeres influyentes en cada país con las cuales se podría trabajar.Organización o activista 
+              Organización o activista interesada por la equidad de género.Ver una lista de las mujeres más 
+              mencionadas o emergentes, su profesión y edad de cada país .Para identificar quienes son las 
+              mujeres influyentes en cada país con las cuales se podría trabajar.Organización o activista
+              Organización o activista interesada por la equidad de género.Ver una lista de las mujeres más 
+              mencionadas o emergentes, su profesión y edad de cada país .Para identificar quienes son las 
+              mujeres influyentes en cada país con las cuales se podría trabajar.Organización o activista
+              Organización o activista interesada por la equidad de género.Ver una lista de las mujeres más 
+              mencionadas o emergentes, su profesión y edad de cada país .Para identificar quienes son las 
+              mujeres influyentes en cada país con las cuales se podría trabajar.Organización o activista
+              Organización o activista interesada por la equidad de género.Ver una lista de las mujeres más 
+              mencionadas o emergentes, su profesión y edad de cada país .Para identificar quienes son las 
+              mujeres influyentes en cada país con las cuales se podría trabajar.Organización o activista
+              Organización o activista interesada por la equidad de género.Ver una lista de las mujeres más 
+              mencionadas o emergentes, su profesión y edad de cada país .Para identificar quienes son las 
+              mujeres influyentes en cada país con las cuales se podría trabajar.Organización o activista
+              Organización o activista interesada por la equidad de género.Ver una lista de las mujeres más 
+              mencionadas o emergentes, su profesión y edad de cada país .Para identificar quienes son las 
+              mujeres influyentes en cada país con las cuales se podría trabajar.Organización o activista
+            </aside>    
+          </div>    
         </main>
         <footer>
           <a href="https://github.com/FelipePrieto22/Grupo-2-Sophia-2" target="_blank">

@@ -3,28 +3,29 @@ import Link from "next/link";
 import Image from "next/image";
 import Layout from "../components/layout";
 
+import Search from "./search";
+import tablaRanking from "./ranking";
 
 const Index = () => {
   return (
-    <div className="container">
-      <Layout pageId="page1">
+    <div className="container"> {/* estructura de la pagina */}
+      <Layout pageId="page1"> {/* identificacion con por la cual es ubicado en layoud.js */}
         <Head>
-          <title>Sophia 2</title>
-          <link rel="icon" href="/favicon.ico" />
+          <title>SOPHIA II</title> 
+          <link rel="icon" href="/favicon.ico" /> 
         </Head>
-
         <main>
-          <Image
-          src="/images/eye.png"//direccion de la imagen seleccionada
-          height={500} // Desired size with correct aspect ratio
-          width={300} // Desired size with correct aspect ratio
-          padding="50 px" //para que no salga pegado a la pagina
-          alt="ojo"//nombre que se le da a la imagen dentro de la página
-        />
-          <h1 className="title">PLANTILLA</h1>
-
+          <h1 className="titulo">Ranking</h1>
+            <div className="menuFiltro">
+              {
+                Search()
+              }
+            </div>
+            {
+              tablaRanking()
+            }
         </main>
-        <footer className="piePagina">
+        <footer>
           <a href="https://github.com/FelipePrieto22/Grupo-2-Sophia-2" target="_blank"> Repositorio y tutorial </a>
         </footer>
       </Layout>
