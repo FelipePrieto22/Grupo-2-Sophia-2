@@ -28,6 +28,14 @@ main {
   word-wrap: break-word; 
   min-height: 600px;
 }
+.buscador{
+  min-height: 600px;
+  padding: 0 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
 .titulo{
   align-items: center;

@@ -1,8 +1,14 @@
+import { Button } from "@mui/material";
 import Head from "next/head";
 import Link from "next/link";
 import tablaRanking from "./ranking";
 
 const Respuesta = () => {
+  function resolver(){
+    let elemento = "";
+    elemento = localStorage.getItem("buscar")
+    alert(elemento);
+  }
   return (
     <div className="container">
       <Head>
@@ -17,7 +23,7 @@ const Respuesta = () => {
             <a className="card">Volver</a>
           </Link>
         </div>
-
+        <Button onClick={()=>resolver()}>respuesta!!!!!</Button>
         {
           tablaRanking()
         }

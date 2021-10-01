@@ -27,10 +27,7 @@ function elementos(data) {
 
 const rows = elementos(data);
 
-export default function tablaRanking() {
-  const [page, setPage] = React.useState(0);
-  const [rowsPerPage, setRowsPerPage] = React.useState(10);
-  
+export default function tablaRanking() { 
   return (
     <Paper sx={{ width: '100%', overflow: 'hidden' }}>
       <TableContainer sx={{ maxHeight: 600 }}>
@@ -66,5 +63,6 @@ export default function tablaRanking() {
         </Table>
       </TableContainer>
     </Paper>
+
   );
 }
