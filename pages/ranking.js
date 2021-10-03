@@ -17,17 +17,20 @@ const columns = [
   { id: 'source_birthday', label: 'Ultima mencion', minWidth: 100 },
   {id: 'mentions',label: 'Menciones',minWidth: 170,align: 'right',format: (value) => value.toLocaleString('en-US')}];
 
-function elementos(data) {
+
+function elementos(data,parametro) {
   var arreglo = [];
   for(var i =0;i<1000; i++){
+    /* if(data[i].source_nationality == parametro){
+      arreglo[i]= data[i];
+    } */
     arreglo[i]= data[i];
   }
   return arreglo
 }
 
-const rows = elementos(data);
-
-export default function tablaRanking() { 
+export default function tablaRanking(parametro) { 
+  const rows = elementos(data,parametro)  
   return (
     <Paper sx={{ width: '100%', overflow: 'hidden' }}>
       <TableContainer sx={{ maxHeight: 600 }}>

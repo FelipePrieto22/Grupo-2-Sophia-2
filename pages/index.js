@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Layout from "../components/layout";
 import React from "react";
-import buscador from "./buscador";
+import CountrySelect from "./barraBuscadora";
 
 const Index = () => {
   return (
@@ -12,10 +12,10 @@ const Index = () => {
         
           <div className="buscador">
             {
-              buscador()
+              CountrySelect()
             }
-
           </div>
+
 
         </main>
         <footer>
