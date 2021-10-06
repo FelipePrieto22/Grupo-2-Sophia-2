@@ -2,9 +2,23 @@ import { Button } from "@mui/material";
 import Head from "next/head";
 import Link from "next/link";
 import tablaRanking from "./ranking";
+import React, { useEffect } from "react";
+
 
 const Respuesta = () => {
+  
+  if (typeof window !== "undefined") {  //obtiene el pais que esta en la url
+    // browser code
+    var elemento = document.URL
+    for(var i=0; i < elemento.length ;i++){
+      if(elemento.charAt(i) == '?'){
+        var a = i;
+      }
+    }
+    var result = elemento.substring(a+1,elemento.length);
+  }
   return (
+    
     <div className="container">
       <Head>
         <title>Busqueda</title>
@@ -20,7 +34,7 @@ const Respuesta = () => {
           </Link>
         </div>
         {
-          tablaRanking()
+          tablaRanking(result)
         }
       </main>
 

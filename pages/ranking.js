@@ -21,10 +21,10 @@ const columns = [
 function elementos(data,parametro) {
   var arreglo = [];
   for(var i =0;i<1000; i++){
-    /* if(data[i].source_nationality == parametro){
+    if(data[i].source_nationality == parametro){
       arreglo[i]= data[i];
-    } */
-    arreglo[i]= data[i];
+    } 
+    
   }
   return arreglo
 }
