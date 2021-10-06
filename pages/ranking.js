@@ -15,19 +15,40 @@ const columns = [
   { id: 'source_gender', label: 'Genero', minWidth: 100 },
   { id: 'source_profession', label: 'Profesión', minWidth: 100 },
   { id: 'source_birthday', label: 'Ultima mencion', minWidth: 100 },
-  {id: 'mentions',label: 'Menciones',minWidth: 170,align: 'right',format: (value) => value.toLocaleString('en-US')}];
+  { id: 'mentions',label: 'Menciones',minWidth: 170,align: 'right',format: (value) => value.toLocaleString('en-US')}];
 
 
 function elementos(data,parametro) {
-  var arreglo = [];
-  for(var i =0;i<1000; i++){
-    if(data[i].source_nationality == parametro){
-      arreglo[i]= data[i];
+  let arreglo = [];
+  let arrFinal = [];
+  for(var i =0;i<data.length; i++){
+    if(data[i].source_nationality == parametro && data[i].source_gender == "Mujer"){
+      arreglo.push(data[i]);
     } 
-    
   }
-  return arreglo
+  
+  for(var i = 0; i < arreglo.length;i++){
+    for(var j = 0; j <= arreglo.length-2;j++){
+      if(parseInt(arreglo[j].mentions) <= parseInt(arreglo[j+1].mentions)){
+        var aux = arreglo[j];
+        arreglo[j] = arreglo[j+1];
+        arreglo[j+1]= aux;
+      }
+    } 
+  }
+  var c =0;
+  for(var k = 0; k < arreglo.length; k++){
+    if(c < 10){
+      arrFinal.push(arreglo[k]);
+      console.log[arrFinal[k]]  
+      arrFinal[k].posicion = posicion[k];
+    }
+    c++
+  }
+  return arrFinal
 }
+
+const posicion = [1,2,3,4,5,6,7,8,9,10];
 
 export default function tablaRanking(parametro) { 
   const rows = elementos(data,parametro)  

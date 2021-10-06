@@ -3,7 +3,7 @@ import Head from "next/head";
 import Link from "next/link";
 import tablaRanking from "./ranking";
 import React, { useEffect } from "react";
-
+import CountrySelect from "./barraBuscadora";
 
 const Respuesta = () => {
   
@@ -25,8 +25,9 @@ const Respuesta = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <h1 className="title">Esta será la pagina donde se mostrara la tabla de ranking</h1>
-      <p>aun falta traer el valor de la barra de busqueda para ser usado como parametro en la tabla</p>
-
+      {
+        CountrySelect()
+      }
       <main>
         <div className="grid">
           <Link href={"/"}>

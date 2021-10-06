@@ -7,11 +7,9 @@ import tablaRanking from './ranking';
 export default function CountrySelect() {
   function estado(valor) {
     let elemento = "";
-    if (valor.keyCode == 13 ) { /* al presionar enter o click */
+    if (valor.keyCode == 13 ) { /* al presionar enter */
       elemento = document.getElementById("buscador-de-paises").value;  /* obtengo para la id = "buscar" el valor que posee */
       document.location.href="/respuesta?" + elemento
-      
-      
     }
   }
   return (
