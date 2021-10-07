@@ -2,16 +2,23 @@ import * as React from 'react';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import Autocomplete from '@mui/material/Autocomplete';
-
+import tablaRanking from './ranking';
 
 export default function CountrySelect() {
-  
+  function estado(valor) {
+    let elemento = "";
+    if (valor.keyCode == 13 ) { /* al presionar enter */
+      elemento = document.getElementById("buscador-de-paises").value;  /* obtengo para la id = "buscar" el valor que posee */
+      document.location.href="/respuesta?" + elemento
+    }
+  }
   return (
     <Autocomplete
       id="buscador-de-paises"
       sx={{ width: 300 }}
       options={countries}
       autoHighlight
+      onKeyPress={()=> estado(event)}
       getOptionLabel={(option) => option.label}
       renderOption={(props, option) => (
         <Box component="li" sx={{ '& > img': { mr: 2, flexShrink: 0 } }} {...props}>
@@ -28,7 +35,7 @@ export default function CountrySelect() {
       renderInput={(params) => (
         <TextField
           {...params}
-          label="Escribe el pais que buscas"
+          label="Escribe el pais que deseas buscar"
           inputProps={{...params.inputProps, autoComplete: 'new-password',}}
         />
       )}

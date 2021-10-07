@@ -1,10 +1,12 @@
+import { Button } from "@mui/material";
 import Head from "next/head";
-import Layout from "../components/layout";
-import React from "react";
-import CountrySelect from "./barraBuscadora";
+import Link from "next/link";
 import tablaRanking from "./ranking";
+import React, { useEffect } from "react";
+import CountrySelect from "./barraBuscadora";
+import Layout from "../components/layout";
 
-const Index = () => {
+const Respuesta = () => {
   if (typeof window !== "undefined") {  //obtiene el pais que esta en la url
     // browser code
     var elemento = document.URL
@@ -16,14 +18,14 @@ const Index = () => {
     var result = elemento.substring(a+1,elemento.length);
   }
   return (
-    
     <div className="container"> {/* estructura de la pagina */}
-      <Layout pageId="page1"> {/* identificacion con por la cual es ubicado en layoud.js */}
+      <Layout>
         <Head><title>SOPHIA II</title> <link rel="icon" href="/favicon.ico" /> </Head>
-        <main>
         
+      
+
+        <main>
           <div className="buscador">
-          
             {
               CountrySelect()
             }
@@ -31,18 +33,21 @@ const Index = () => {
           Tabla de búsqueda 
         </h1>
           </div>
+        
+
           {
           tablaRanking(result)
         }
-
+       
 
         </main>
         <footer>
           <a href="https://github.com/FelipePrieto22/Grupo-2-Sophia-2" target="_blank"> Repositorio y tutorial </a>
         </footer>
-      </Layout>
+        </Layout>
     </div>
   );
+  
 };
 
-export default Index;
+export default Respuesta;
