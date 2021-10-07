@@ -1,1 +1,3 @@
-Deje solo lo que nos podria servir para comenzar, deje una pagina principal para tener todo lo relacionado al trabajo y el acerca de donde podemos poner como la descripcion del trabajo, integrantes y todo ese tipo de cosas, estas 2 paginas las enlace al layout.
+Rama Felipe Prieto
+1) agregue una tabla con el contenido del archivo JSON, y tambien una barra de busqueda sin completo funcionamiento y un
+boton de filtro aun incompleto.
