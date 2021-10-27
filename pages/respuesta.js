@@ -25,8 +25,9 @@ const Respuesta = () => {
       
 
         <main>
-          <div className="buscador">
+          <div className="buscador_resultado">
             {
+              
               CountrySelect()
             }
         <h1 className="title">

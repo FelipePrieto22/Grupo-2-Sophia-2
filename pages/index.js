@@ -27,15 +27,8 @@ const Index = () => {
             {
               CountrySelect()
             }
-        <h1 className="title">
-          Tabla de búsqueda 
-        </h1>
+        
           </div>
-          {
-          tablaRanking(result)
-        }
-
-
         </main>
         <footer>
           <a href="https://github.com/FelipePrieto22/Grupo-2-Sophia-2" target="_blank"> Repositorio y tutorial </a>
