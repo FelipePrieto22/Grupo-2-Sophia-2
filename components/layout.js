@@ -15,8 +15,11 @@ const Layout = ({ children, pageId }) => {
         <Link href="/">
           <a className={pageId === "page1" ? "currentPage" : ""}> Página principal </a>
         </Link>
+        <Link href="/grafico">
+          <a className={pageId === "page2" ? "currentPage" : ""}> Grafico</a>
+        </Link>
         <Link href="/about">
-          <a className={pageId === "page2" ? "currentPage" : ""}> Acerca de </a>
+          <a className={pageId === "page3" ? "currentPage" : ""}> Acerca de </a>
         </Link>
         
 

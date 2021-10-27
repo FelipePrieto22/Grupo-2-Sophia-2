@@ -4,7 +4,7 @@ import Layout from "../components/layout";
 const About = () => {
   return (
     <div className="container">
-      <Layout pageId="page2">
+      <Layout pageId="page3">
         <Head>
           <title>Acerca de</title>
           <link rel="icon" href="/favicon.ico" />
