@@ -36,7 +36,7 @@ export default function CountrySelect() {
         <TextField
           {...params}
           label="Escribe el pais que deseas buscar"
-          inputProps={{...params.inputProps, autoComplete: 'new-password',}}
+          inputProps={{...params.inputProps, autoComplete: 'new-password',}} 
         />
       )}
     />
