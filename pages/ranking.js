@@ -18,40 +18,67 @@ const columns = [
   { id: 'mentions',label: 'Menciones',minWidth: 170,align: 'right',format: (value) => value.toLocaleString('en-US')}];
 
 
-function elementos(data,parametro) {
+function elementos(data,parametro,tipo) {
   let arreglo = [];
   let arrFinal = [];
-  for(var i =0;i<data.length; i++){
-    if(data[i].source_nationality == parametro && data[i].source_gender == "Mujer"){
-      arreglo.push(data[i]);
-    } 
-  }
-  
-  for(var i = 0; i < arreglo.length;i++){
-    for(var j = 0; j <= arreglo.length-2;j++){
-      if(parseInt(arreglo[j].mentions) <= parseInt(arreglo[j+1].mentions)){
-        var aux = arreglo[j];
-        arreglo[j] = arreglo[j+1];
-        arreglo[j+1]= aux;
-      }
-    } 
-  }
-  var c =0;
-  for(var k = 0; k < arreglo.length; k++){
-    if(c < 10){
-      arrFinal.push(arreglo[k]);
-      console.log[arrFinal[k]]  
-      arrFinal[k].posicion = posicion[k];
+  if(tipo == 1){
+    for(var i =0;i<data.length; i++){
+      if(data[i].source_profession == parametro){
+        arreglo.push(data[i]);
+      } 
     }
-    c++
+    for(var i = 0; i < arreglo.length;i++){
+      for(var j = 0; j <= arreglo.length-2;j++){
+        if(parseInt(arreglo[j].mentions) <= parseInt(arreglo[j+1].mentions)){
+          var aux = arreglo[j];
+          arreglo[j] = arreglo[j+1];
+          arreglo[j+1]= aux;
+        }
+      } 
+    }
+    var c =0;
+    for(var k = 0; k < arreglo.length; k++){
+      if(c < 20){
+        arrFinal.push(arreglo[k]);
+        console.log[arrFinal[k]]  
+        arrFinal[k].posicion = posicion[k];
+      }
+      c++
+    }
+  }
+  else{
+    for(var i =0;i<data.length; i++){
+      if(data[i].source_nationality == parametro && data[i].source_gender == "Mujer"){
+        arreglo.push(data[i]);
+      } 
+    }
+    
+    for(var i = 0; i < arreglo.length;i++){
+      for(var j = 0; j <= arreglo.length-2;j++){
+        if(parseInt(arreglo[j].mentions) <= parseInt(arreglo[j+1].mentions)){
+          var aux = arreglo[j];
+          arreglo[j] = arreglo[j+1];
+          arreglo[j+1]= aux;
+        }
+      } 
+    }
+    var c =0;
+    for(var k = 0; k < arreglo.length; k++){
+      if(c < 10){
+        arrFinal.push(arreglo[k]);
+        console.log[arrFinal[k]]  
+        arrFinal[k].posicion = posicion[k];
+      }
+      c++
+    }
   }
   return arrFinal
 }
 
 const posicion = [1,2,3,4,5,6,7,8,9,10];
 
-export default function tablaRanking(parametro) { 
-  const rows = elementos(data,parametro)  
+export default function tablaRanking(parametro,tipo) { 
+  const rows = elementos(data,parametro,tipo)  
   return (
     <Paper sx={{ width: '100%', overflow: 'hidden' }}>
       <TableContainer sx={{ maxHeight: 600 }}>

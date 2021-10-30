@@ -37,9 +37,7 @@ function elementos(data,parametro) {
         arrFinal[k] = [posicion[10-k], arrHombre[k].mentions,arrMujer[k].mentions];
       }
       c++
-    }
-    console.log(arrFinal);
-  
+    }  
   return arrFinal
 }
 
@@ -49,12 +47,14 @@ export default function graficoGenerado(parametro) {
   const datos = elementos(data,parametro)  
   return (
     <Chart
-    width={'800'}
-    height={'400px'}
-    chartType="LineChart"
+    width={'500'}
+    height={'300px'}
+    chartType="Bar"
     loader={<div>Loading Chart</div>}
+    
     data={datos}
     options={{
+      chartArea: { width: '20%' },
       hAxis: { 
         title: 'Ranking'
       },
