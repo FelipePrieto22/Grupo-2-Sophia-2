@@ -28,13 +28,11 @@ const Respuesta = () => {
               buscarProfesion()
             }
         <h1 className="title">
-          Grafico de resultado de busqueda
+          Grafico resultante de la profesion: {result}
         </h1>
           </div>
-
           {
-          graficoGenerado(result)//crear una tabla con la informacion de las personas
-          /*  tablaProfesion(result) */
+            graficoGenerado(result)
           }
           <div>
            {

@@ -16,18 +16,16 @@ const Respuesta = () => {
       }
     }
     var result = elemento.substring(a+1,elemento.length);
+    
   }
   return (
-    <div className="container"> {/* estructura de la pagina */}
+    <div className="container"> 
       <Layout>
         <Head><title>SOPHIA II</title> <link rel="icon" href="/favicon.ico" /> </Head>
         
-      
-
         <main>
           <div className="buscador_resultado">
             {
-              
               CountrySelect()
             }
         <h1 className="title">

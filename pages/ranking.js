@@ -21,6 +21,8 @@ const columns = [
 function elementos(data,parametro,tipo) {
   let arreglo = [];
   let arrFinal = [];
+  let arrHombre= [];
+  let arrMujer = [];
   if(tipo == 1){
     for(var i =0;i<data.length; i++){
       if(data[i].source_profession == parametro){
@@ -36,15 +38,24 @@ function elementos(data,parametro,tipo) {
         }
       } 
     }
+    for(var k = 0; k < arreglo.length; k++){
+      if(arreglo[k].source_gender == "Hombre"){
+          arrHombre.push(arreglo[k]);
+      }
+      else{
+          arrMujer.push(arreglo[k]);
+      }
+    }
     var c =0;
     for(var k = 0; k < arreglo.length; k++){
-      if(c < 20){
-        arrFinal.push(arreglo[k]);
-        console.log[arrFinal[k]]  
+      if(c < 10){
+        arrFinal.push(arrHombre[k]); 
+        arrFinal.push(arrMujer[k]); 
         arrFinal[k].posicion = posicion[k];
       }
       c++
     }
+      
   }
   else{
     for(var i =0;i<data.length; i++){
@@ -75,7 +86,7 @@ function elementos(data,parametro,tipo) {
   return arrFinal
 }
 
-const posicion = [1,2,3,4,5,6,7,8,9,10];
+const posicion = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20];
 
 export default function tablaRanking(parametro,tipo) { 
   const rows = elementos(data,parametro,tipo)  

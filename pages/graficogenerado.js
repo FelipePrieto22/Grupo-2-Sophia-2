@@ -30,11 +30,11 @@ function elementos(data,parametro) {
     else{
         arrMujer.push(arreglo[k]);
     }
-    }
+  }
   arrFinal[0] = ['x', 'Hombres', 'Mujeres'];
   for(var k = 1; k < arreglo.length; k++){
     if(c < 10){
-        arrFinal[k] = [posicion[10-k], arrHombre[k].mentions,arrMujer[k].mentions];
+        arrFinal[k] = [posicion[10-k], arrHombre[k-1].mentions,arrMujer[k-1].mentions];
       }
       c++
     }  

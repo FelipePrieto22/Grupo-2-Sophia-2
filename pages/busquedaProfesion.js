@@ -10,20 +10,20 @@ export default function buscarProfesion() {
     }
   }
   return (
-    <TextField id="profesion"label="Escribe una profesion" sx={{ width: 300 }}
-    /* variant="standard" */
-    InputProps={{
-      endAdornment: <InputAdornment position="end"> {
-          <IconButton edge="end" onClick={()=> estado(event,true)}>
-            <img src="/lupa.png" width="30"/>
-          </IconButton> 
-        }
-    </InputAdornment>,
-    }}
-    autoHighlight
-    onKeyPress={()=> estado(event)
-    
-    }/>
-    
+      <TextField id="profesion"label="Escribe una profesion" sx={{ width: 300 }}
+      /* variant="standard" */
+      InputProps={{
+        endAdornment: <InputAdornment position="end"> {
+            <IconButton edge="end" onClick={()=> estado(event,true)}>
+              <img src="/lupa.png" width="30"/>
+            </IconButton> 
+          }
+      </InputAdornment>,
+      }}
+      autoHighlight
+      onKeyPress={()=> estado(event)
+      
+      }/>
+
   );
 }
