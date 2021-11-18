@@ -16,6 +16,7 @@ const Respuesta = () => {
       }
     }
     var result = elemento.substring(a+1,elemento.length);
+    result = result.replace("%20", " "); // reemplaza los %20 por un espacio
     
   }
   return (
@@ -32,13 +33,9 @@ const Respuesta = () => {
           Tabla de búsqueda 
         </h1>
           </div>
-        
-
           {
           tablaRanking(result)
         }
-       
-
         </main>
         <footer>
           <a href="https://github.com/FelipePrieto22/Grupo-2-Sophia-2" target="_blank"> Repositorio y tutorial </a>

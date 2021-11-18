@@ -259,7 +259,7 @@ const countries = [
   {code: 'TZ', label: 'United Republic of Tanzania'},
   {code: 'UA', label: 'Ukraine'},
   {code: 'UG', label: 'Uganda'},
-  {code: 'US', label: 'United States',suggested: true},
+  {code: 'US', label: 'Estados Unidos',suggested: true},
   {code: 'UY', label: 'Uruguay'},
   {code: 'UZ', label: 'Uzbekistan'},
   {code: 'VA', label: 'Holy See (Vatican City State)'},

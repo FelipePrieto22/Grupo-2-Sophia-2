@@ -14,6 +14,7 @@ const Index = () => {
       }
     }
     var result = elemento.substring(a+1,elemento.length);
+    
   }
   return (
     
