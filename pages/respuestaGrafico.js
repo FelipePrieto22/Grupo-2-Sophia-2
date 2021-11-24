@@ -8,7 +8,6 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 
 const Respuesta=()=>{ 
-  const [data, setData] = useState("");
   
   if (typeof window !== "undefined") {  //obtiene el pais que esta en la url
     // browser code
@@ -20,23 +19,9 @@ const Respuesta=()=>{
     }
 
     var profession = elemento.substring(a+1,elemento.length);
+    profession = profession.toLocaleLowerCase();
   }
-  useEffect(() => {
-    var config = {
-      method: 'get',
-      url: 'http://45.79.169.216:86/persons_by_profession/?profession='+profession+'&page=1&size=50',
-      headers: { 
-        'accept': 'application/json', 
-        'X-Api-Key': 'password'
-      }
-    }
-    axios(config)
-    .then(res => {
-        const result = res.data;
-        setData(result);
-    })
-  }, []);
-  
+   
   return (
     <div className="container"> {/* estructura de la pagina */}
       <Layout>
@@ -54,9 +39,7 @@ const Respuesta=()=>{
             graficoGenerado(profession)
           }
           <div>
-            {
-              console.log(data)
-            }
+            
            {
              tablaRanking(profession,1)
            }

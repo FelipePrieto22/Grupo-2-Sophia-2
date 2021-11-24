@@ -16,7 +16,7 @@ const columns = [
   { id: 'name', label: 'Nombre', minWidth: 100 },
   { id: 'gender', label: 'Género', minWidth: 100 },
   { id: 'profession', label: 'Profesión', minWidth: 100 },
-  { id: 'year', label: 'Última mención', minWidth: 100 },
+  { id: 'year', label: 'año de nacimiento', minWidth: 100 },
   { id: 'mentions',label: 'Menciones',minWidth: 170,align: 'right',format: (value) => value.toLocaleString('en-US')}];
 
 
@@ -25,14 +25,14 @@ function elementos(data,parametro,tipo) {
   let arrFinal = [];
   let arrHombre= [];
   let arrMujer = [];
-  //console.log( Object.keys (data) )
+
   if(tipo == 1){
     for(var i =0;i<data.total; i++){
       if(data.items[i].profession == parametro){
         arreglo.push(data.items[i]);
       } 
     }
-    //console.log(Object.keys(data.items).length);
+
     for(var i = 0; i < arreglo.length;i++){
       for(var j = 0; j <= arreglo.length-2;j++){
         if(parseInt(arreglo[j].mentions) <= parseInt(arreglo[j+1].mentions)){
@@ -43,7 +43,7 @@ function elementos(data,parametro,tipo) {
       } 
     }
     for(var k = 0; k < arreglo.length; k++){
-      if(arreglo[k].gender == "H"){
+      if(arreglo[k].gender == "M"){
           arrHombre.push(arreglo[k]);
       }
       else{
@@ -59,8 +59,7 @@ function elementos(data,parametro,tipo) {
       }
       c++
     }
-  }
-  
+  } 
   else{
     for(var i =0;i< data.total; i++){
       if(data.items[i].country == parametro && data.items[i].gender == "F"){
