@@ -5,6 +5,8 @@ import tablaRanking from "./ranking";
 import React, { useEffect } from "react";
 import CountrySelect from "./barraBuscadora";
 import Layout from "../components/layout";
+import From from "./from";
+import To from "./to";
 
 const Respuesta = () => {
   if (typeof window !== "undefined") {  //obtiene el pais que esta en la url
@@ -29,13 +31,23 @@ const Respuesta = () => {
             {
               CountrySelect()
             }
-        <h1 className="title">
-          Tabla de búsqueda 
-        </h1>
           </div>
-          {
-          tablaRanking(result)
-        }
+          <div className="filtro">
+          <h1 className="from">From:</h1>
+            {
+              From()
+            }
+          <h1 className="to">To:</h1>
+            {
+              To()
+            }
+          </div>
+          <h1 className="searchTable">
+          Tabla de búsqueda 
+          </h1>
+            {
+              tablaRanking(result)
+            }
         </main>
         <footer>
           <a href="https://github.com/FelipePrieto22/Grupo-2-Sophia-2" target="_blank"> Repositorio y tutorial </a>

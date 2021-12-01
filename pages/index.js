@@ -4,6 +4,7 @@ import React from "react";
 import CountrySelect from "./barraBuscadora";
 import tablaRanking from "./ranking";
 
+
 const Index = () => {
   if (typeof window !== "undefined") {  //obtiene el pais que esta en la url
     // browser code
@@ -28,7 +29,6 @@ const Index = () => {
             {
               CountrySelect()
             }
-        
           </div>
         </main>
         <footer>
