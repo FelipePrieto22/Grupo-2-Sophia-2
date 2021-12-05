@@ -42,7 +42,7 @@ main_2 {
   /*barra buscadora en pagina principal*/
 
   align-items: center;
-  margin: 200px;
+  margin: 150px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -201,7 +201,7 @@ code {
   }
 }
 .searchTable {
-  margin-bottom: 180px;
+  margin-bottom: 200px;
   line-height: 1;
   font-size: 40px;
   text-align: center;
@@ -226,8 +226,39 @@ code {
 .filtroTo {
   margin: 0px 0px 0px 1000px;
   display: flexbox;
-  line-height: normal;
   font-size: 100%;
+  justify-content: flex-start;
+}
+.fromIndex {
+  align-items: center;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.toIndex {
+  align-self: flex-end;
+  margin-right: 819px;
+  margin-bottom: 40px;
+}
+.etiquetafrom {
+  margin: 0px 200px;
+  display: block;
+  line-height: normal;
+  font-size: 110%;
   font-family: "Times New Roman", Times, serif;
   justify-content: flex-start;
+}
+.etiquetato {
+  margin: 0px;
+  margin-left: 1063px;
+  display: inline-block;
+  line-height: 50%;
+  font-size: 110%;
+  font-family: "Times New Roman", Times, serif;
+  justify-content: first baseline;
+}
+.nameBar {
+  font-size: 150%;
+  font-family: "Times New Roman", Times, serif;
 }

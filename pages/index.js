@@ -3,6 +3,9 @@ import Layout from "../components/layout";
 import React from "react";
 import CountrySelect from "./barraBuscadora";
 import tablaRanking from "./ranking";
+import From from "./from";
+import To from "./to";
+
 
 
 const Index = () => {
@@ -24,12 +27,13 @@ const Index = () => {
         <Head><title>SOPHIA II</title> <link rel="icon" href="/favicon.ico" /> </Head>
         <main>
         
-          <div className="buscador">
-          
+          <div className="buscador"><h1 className="nameBar">Barra buscadora:</h1>
             {
               CountrySelect()
             }
           </div>
+          <div className="fromIndex"><h1 className="etiquetafrom">Desde:</h1>{From()}</div>
+          <div className="toIndex"><h1 className="etiquetato">Hasta:</h1>{To()}</div>
         </main>
         <footer>
           <a href="https://github.com/FelipePrieto22/Grupo-2-Sophia-2" target="_blank"> Repositorio y tutorial </a>

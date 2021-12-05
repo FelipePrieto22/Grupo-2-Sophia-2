@@ -33,11 +33,11 @@ const Respuesta = () => {
             }
           </div>
           <div className="filtro">
-          <h1 className="from">From:</h1>
+          <h1 className="from">Desde:</h1>
             {
               From()
             }
-          <h1 className="to">To:</h1>
+          <h1 className="to">Hasta:</h1>
             {
               To()
             }
