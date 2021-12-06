@@ -5,8 +5,8 @@ import tablaRanking from "./ranking";
 import React, { useEffect } from "react";
 import CountrySelect from "./barraBuscadora";
 import Layout from "../components/layout";
-import From from "./from";
-import To from "./to";
+import hastaTo from "./responsiveTo";
+import ResponsiveDatePickers from "./responsive";
 
 const Respuesta = () => {
   if (typeof window !== "undefined") {  //obtiene el pais que esta en la url
@@ -32,14 +32,14 @@ const Respuesta = () => {
               CountrySelect()
             }
           </div>
-          <div className="filtro">
-          <h1 className="from">Desde:</h1>
+          <div className="desde">
             {
-              From()
+              ResponsiveDatePickers()
             }
-          <h1 className="to">Hasta:</h1>
+          </div>
+          <div className="hasta">
             {
-              To()
+              hastaTo()
             }
           </div>
           <h1 className="searchTable">

@@ -3,9 +3,8 @@ import Layout from "../components/layout";
 import React from "react";
 import CountrySelect from "./barraBuscadora";
 import tablaRanking from "./ranking";
-import From from "./from";
-import To from "./to";
-
+import ResponsiveDatePickers from "./responsive";
+import hastaTo from "./responsiveTo"
 
 
 const Index = () => {
@@ -26,14 +25,21 @@ const Index = () => {
       <Layout pageId="page1"> {/* identificacion con por la cual es ubicado en layoud.js */}
         <Head><title>SOPHIA II</title> <link rel="icon" href="/favicon.ico" /> </Head>
         <main>
-        
           <div className="buscador"><h1 className="nameBar">Barra buscadora:</h1>
             {
               CountrySelect()
             }
           </div>
-          <div className="fromIndex"><h1 className="etiquetafrom">Desde:</h1>{From()}</div>
-          <div className="toIndex"><h1 className="etiquetato">Hasta:</h1>{To()}</div>
+          <div className="Responsive">
+            {
+              ResponsiveDatePickers()
+            }
+          </div>
+          <div className="claseTo">
+            {
+              hastaTo()
+            }
+          </div>
         </main>
         <footer>
           <a href="https://github.com/FelipePrieto22/Grupo-2-Sophia-2" target="_blank"> Repositorio y tutorial </a>
