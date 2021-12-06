@@ -4,22 +4,17 @@ import Layout from "../components/layout";
 import buscarProfesion from "./busquedaProfesion";
 import graficoGenerado from "./graficogenerado";
 import tablaRanking from "./ranking";
-import axios from "axios";
-import { useState, useEffect } from "react";
 
 const Respuesta=()=>{ 
-  
   if (typeof window !== "undefined") {  //obtiene el pais que esta en la url
-    // browser code
+
     var elemento = document.URL
     for(var i=0; i < elemento.length ;i++){
       if(elemento.charAt(i) == '?'){
         var a = i;
       }
     }
-
     var profession = elemento.substring(a+1,elemento.length);
-    profession = profession.toLocaleLowerCase();
   }
    
   return (
@@ -41,7 +36,7 @@ const Respuesta=()=>{
           <div>
             
            {
-             tablaRanking(profession,1)
+            //tablaRanking(profession,1)
            }
           </div>
 

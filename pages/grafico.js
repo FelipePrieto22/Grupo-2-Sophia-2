@@ -4,25 +4,20 @@
 import Head from "next/head";
 import Layout from "../components/layout";
 import React from "react";
-
 import buscarProfesion from "./busquedaProfesion";
-
 
 const Grafico = () => {
   return (
-    
-    
     <div className="container">
       <Layout pageId="page2"> 
         <Head><title>Grafico</title> <link rel="icon" href="/favicon.ico" /> </Head>
         <main>
               <div> <h1>Prueba con las siguientes profesiones: </h1>
-                Profesor,Abogado, Médico cirujano, Paleontólogo, Ingeniero, Historiador, Geógrafo, Biólogo,
-                Filólogo, Psicólogo, Matemático, Arquitecto, Profesor, Periodista, Botánico, Físico, Sociólogo, 
-                Administrador, Lingüista, Radiólogo, Contador, Psicoanalista, Ecólogo
+                Profesor, Abogado, Médico cirujano, Paleontólogo, Ingeniero, Historiador, Geógrafo, Biólogo, Filólogo,
+                Psicólogo, Matemático, Arquitecto, Profesor, Periodista, Botánico, Físico, Sociólogo, Administrador, 
+                Lingüista, Radiólogo, Contador, Psicoanalista, Ecólogo.
               </div>
             <div className="buscador">
-              
               {
                 buscarProfesion()
               }

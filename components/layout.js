@@ -13,10 +13,10 @@ const Layout = ({ children, pageId }) => {
       
       <header className="menu"> 
         <Link href="/">
-          <a className={pageId === "page1" ? "currentPage" : ""}> Página principal </a>
+          <a className={pageId === "page1" ? "currentPage" : ""}> Historia 1 </a>
         </Link>
         <Link href="/grafico">
-          <a className={pageId === "page2" ? "currentPage" : ""}> Grafico</a>
+          <a className={pageId === "page2" ? "currentPage" : ""}> Historia 2</a>
         </Link>
         <Link href="/about">
           <a className={pageId === "page3" ? "currentPage" : ""}> Acerca de </a>

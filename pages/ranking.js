@@ -19,7 +19,6 @@ const columns = [
   { id: 'year', label: 'año de nacimiento', minWidth: 100 },
   { id: 'mentions',label: 'Menciones',minWidth: 170,align: 'right',format: (value) => value.toLocaleString('en-US')}];
 
-
 function elementos(data,parametro,tipo) {
   let arreglo = [];
   let arrFinal = [];
