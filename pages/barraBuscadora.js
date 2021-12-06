@@ -8,7 +8,7 @@ export default function CountrySelect() {
     let elemento = "";
     if (valor.keyCode == 13 ) { /* al presionar enter */
       elemento = document.getElementById("buscador-de-paises").value;  /* obtengo para la id = "buscar" el valor que posee */
-      document.location.href="/respuesta?" + elemento
+      document.location.href="/respuesta?country=" + elemento
     }
   }
   return (

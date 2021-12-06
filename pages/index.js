@@ -22,9 +22,13 @@ const Index = () => {
       <Layout pageId="page1"> {/* identificacion con por la cual es ubicado en layoud.js */}
         <Head><title>SOPHIA II</title> <link rel="icon" href="/favicon.ico" /> </Head>
         <main>
-        
+        <div> <h1>Elige un pais de la barra buscadora: </h1>
+            La página buscará si existen personas de aquel país en la base de datos, si existen,
+            generará una tabla organizada con las personas más influentes del país según su numero de 
+            menciones en los medios.
+            <div>PD: la pagina actualmente cuenta con personas de Chile y Estados Unidos</div>
+              </div>
           <div className="buscador">
-          
             {
               CountrySelect()
             }

@@ -4,9 +4,10 @@ import Layout from "../components/layout";
 import buscarProfesion from "./busquedaProfesion";
 import graficoGenerado from "./graficogenerado";
 import tablaRanking from "./ranking";
+import tablaRankingProfession from "./ranking_profession"
 
 const Respuesta=()=>{ 
-  if (typeof window !== "undefined") {  //obtiene el pais que esta en la url
+  if (typeof window !== "undefined") {  //obtiene la profesion que esta en la url
 
     var elemento = document.URL
     for(var i=0; i < elemento.length ;i++){
@@ -14,7 +15,9 @@ const Respuesta=()=>{
         var a = i;
       }
     }
-    var profession = elemento.substring(a+1,elemento.length);
+    var profession = elemento.substring(a+12,elemento.length);
+    console.log(profession)
+    
   }
    
   return (
@@ -36,7 +39,7 @@ const Respuesta=()=>{
           <div>
             
            {
-            //tablaRanking(profession,1)
+            tablaRankingProfession(profession,1)
            }
           </div>
 

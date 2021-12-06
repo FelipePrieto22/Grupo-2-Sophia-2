@@ -13,14 +13,14 @@ import dataJson from '/public/data/datos.json' ;
 
 const columns = [
   { id: 'posicion', label: 'Puesto'},
-  { id: 'country', label: 'Pais', minWidth: 170 },
-  { id: 'name', label: 'Nombre', minWidth: 100 },
-  { id: 'gender', label: 'Género', minWidth: 100 },
-  { id: 'profession', label: 'Profesión', minWidth: 100 },
-  { id: 'year', label: 'año de nacimiento', minWidth: 100 },
+  { id: 'source_nationality', label: 'Pais', minWidth: 170 },
+  
+  
+  { id: 'source_profession', label: 'Profesión', minWidth: 100 },
+  
   { id: 'mentions',label: 'Menciones',minWidth: 170,align: 'right',format: (value) => value.toLocaleString('en-US')}
 ];
-
+10
 function elementos(data,parametro,tipo) {
   let arreglo = [];
   let arrFinal = [];
@@ -37,7 +37,7 @@ function elementos(data,parametro,tipo) {
         } 
       }
       
-      for(var i = 0; i < arreglo.length;i++){
+      for(var i = 0; i < arreglo.length;i++){  //Ordena el arreglo
         for(var j = 0; j <= arreglo.length-2;j++){
           if(parseInt(arreglo[j].mentions) <= parseInt(arreglo[j+1].mentions)){
             var aux = arreglo[j];
@@ -58,7 +58,7 @@ function elementos(data,parametro,tipo) {
       for(var k = 0; k < arreglo.length; k++){
         if(c < 10){
           arrFinal.push(arrHombre[k]); 
-          arrFinal.push(arrMujer[k]); 
+          //arrFinal.push(arrMujer[k]); 
           arrFinal[k].posicion = posicion[k];
         }
         c++
@@ -99,27 +99,11 @@ function elementos(data,parametro,tipo) {
   return arrFinal
 }
 
-const posicion = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20];
+const posicion = [1,2,3,4,5,6,7,8,9,10];
 
-export default function tablaRanking(parametro,tipo) { 
-  const [data, setData] = useState("");
-  useEffect(() => {
-    var config = {
-      method: 'get',
-      url: 'http://45.79.169.216:86/persons_by_country/?country='+parametro+'&page=1&size=50',
-      headers: { 
-        'accept': 'application/json', 
-        'X-Api-Key': 'password'
-      }
-    }
-    axios(config)
-    .then(res => {
-        const result = res.data;
-        setData(result);
-        console.log(result);
-    })
-  }, []);
-  const rows = elementos(data,parametro,tipo);
+export default function tablaRankingProfession(parametro,tipo) { 
+  
+  const rows = elementos(dataJson,parametro,tipo);
     
   return (
     <Paper sx={{ width: '100%', overflow: 'hidden' }}>

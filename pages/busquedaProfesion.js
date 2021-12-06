@@ -6,7 +6,7 @@ export default function buscarProfesion() {
     let elemento = "";
     if (valor.keyCode == 13 || valida) {
         elemento = document.getElementById("profesion").value;  
-        document.location.href="/respuestaGrafico?" + elemento
+        document.location.href="/respuestaGrafico?profession=" + elemento
     }
   }
   return (

@@ -55,7 +55,7 @@ const posicion = [10,9,8,7,6,5,4,3,2,1];
 
 export default function graficoGenerado(parametro) { 
   const datos = elementos(data,parametro) ;
-  console.log(parametro)
+ 
   return (
     <Chart
     width={'500'}

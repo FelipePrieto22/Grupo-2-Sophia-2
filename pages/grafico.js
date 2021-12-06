@@ -16,7 +16,11 @@ const Grafico = () => {
                 Profesor, Abogado, Médico cirujano, Paleontólogo, Ingeniero, Historiador, Geógrafo, Biólogo, Filólogo,
                 Psicólogo, Matemático, Arquitecto, Profesor, Periodista, Botánico, Físico, Sociólogo, Administrador, 
                 Lingüista, Radiólogo, Contador, Psicoanalista, Ecólogo.
-              </div>
+                <div>
+                  La pagina buscará en la base de datos personas según la profesión elegida y generará un gráfico
+                  que muestra la cantidad de mujeres vs cantidad de hombres en esta profesión por cada pais. 
+                </div>
+                </div>
             <div className="buscador">
               {
                 buscarProfesion()

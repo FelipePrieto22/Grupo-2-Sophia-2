@@ -15,7 +15,8 @@ const Respuesta = () => {
         var a = i;
       }
     }
-    var result = elemento.substring(a+1,elemento.length);
+    var result = elemento.substring(a+9,elemento.length);
+    console.log(result);
     result = result.replace("%20", " "); // reemplaza los %20 por un espacio
     
   }

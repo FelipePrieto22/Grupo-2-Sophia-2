@@ -4,6 +4,7 @@ import * as React from 'react';
 
 const Layout = ({ children, pageId }) => {
   return (
+    
     <div className="container">
       <div>
         <h1 className="title">
