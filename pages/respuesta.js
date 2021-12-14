@@ -6,7 +6,7 @@ import React, { useEffect } from "react";
 import CountrySelect from "./barraBuscadora";
 import Layout from "../components/layout";
 import hastaTo from "./responsiveTo";
-import ResponsiveDatePickers from "./responsive"
+import ResponsiveDatePickers from "./responsive";
 
 const Respuesta = () => {
   if (typeof window !== "undefined") {  //obtiene el pais que esta en la url

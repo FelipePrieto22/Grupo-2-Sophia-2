@@ -22,7 +22,6 @@ body {
   justify-content: center;
 }
 main {
-  
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -32,28 +31,29 @@ main {
 main_2 {
   margin-left: auto;
   margin-right: auto;
-  
+
   flex: 1;
   display: flex;
   flex-direction: row;
   word-wrap: break-word;
   min-height: 50px;
 }
-.buscador { /*barra buscadora en pagina principal*/
-  
-  align-items: center;
-  margin: 200px ;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-}
-.buscador_resultado { /*barra buscadora en pagina resultado*/
-  margin: 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-}
+.buscador {
+  /*barra buscadora en pagina principal*/
 
+  align-items: center;
+  margin: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.buscador_resultado {
+  /*barra buscadora en pagina resultado*/
+  margin: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
 .titulo {
   align-items: center;
   text-align: center;
@@ -82,7 +82,6 @@ main_2 {
   /*background-color: hsla(258, 76%, 37%, 0.226); */
   flex-direction: row;
   min-height: 275px;
-  
 }
 
 .titulos {
@@ -107,7 +106,6 @@ main_2 {
   width: 50%;
   margin-left: auto;
   margin-right: auto;
-
 }
 
 .menuFiltro {
@@ -195,4 +193,33 @@ code {
     width: 100%;
     flex-direction: column;
   }
+}
+.searchTable {
+  margin-bottom: 50px;
+  line-height: 1;
+  font-size: 40px;
+  text-align: center;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.nameBar {
+  font-size: 150%;
+  font-family: "Times New Roman", Times, serif;
+}
+.Responsive {
+  margin: auto;
+}
+.claseTo {
+  margin: auto;
+  margin-top: 30px;
+}
+.desde {
+  margin: auto;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.hasta {
+  margin: auto;
+  margin-top: 25px;
+  font-family: "Times New Roman", Times, serif;
 }
