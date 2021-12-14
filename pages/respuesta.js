@@ -5,6 +5,8 @@ import tablaRanking from "./ranking";
 import React, { useEffect } from "react";
 import CountrySelect from "./barraBuscadora";
 import Layout from "../components/layout";
+import hastaTo from "./responsiveTo";
+import ResponsiveDatePickers from "./responsive"
 
 const Respuesta = () => {
   if (typeof window !== "undefined") {  //obtiene el pais que esta en la url
@@ -16,7 +18,6 @@ const Respuesta = () => {
       }
     }
     var result = elemento.substring(a+9,elemento.length);
-    console.log(result);
     result = result.replace("%20", " "); // reemplaza los %20 por un espacio
     
   }
@@ -30,13 +31,23 @@ const Respuesta = () => {
             {
               CountrySelect()
             }
-        <h1 className="title">
-          Tabla de búsqueda 
-        </h1>
           </div>
-          {
-          tablaRanking(result)
-        }
+          <div className="desde">
+            {
+              ResponsiveDatePickers()
+            }
+          </div>
+          <div className="hasta">
+            {
+              hastaTo()
+            }
+          </div>
+          <h1 className="searchTable">
+          Tabla de búsqueda 
+          </h1>
+            {
+              tablaRanking(result)
+            }
         </main>
         <footer>
           <a href="https://github.com/FelipePrieto22/Grupo-2-Sophia-2" target="_blank"> Repositorio y tutorial </a>

@@ -3,6 +3,9 @@ import Layout from "../components/layout";
 import React from "react";
 import CountrySelect from "./barraBuscadora";
 import tablaRanking from "./ranking";
+import ResponsiveDatePickers from "./responsive";
+import hastaTo from "./responsiveTo"
+
 
 const Index = () => {
   if (typeof window !== "undefined") {  //obtiene el pais que esta en la url
@@ -34,6 +37,17 @@ const Index = () => {
             }
         
           </div>
+          <div className="Responsive">
+            {
+              ResponsiveDatePickers()
+            }
+          </div>
+          <div className="claseTo">
+            {
+              hastaTo()
+            }
+          </div>
+
         </main>
         <footer>
           <a href="https://github.com/FelipePrieto22/Grupo-2-Sophia-2" target="_blank"> Repositorio y tutorial </a>
